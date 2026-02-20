@@ -16,6 +16,17 @@ body, h1, h2, h3, p, ul, li, table {
     --border: #e3eaf2;
 }
 
+[data-theme="dark"] {
+    --main-blue: #1a3a6b;
+    --header-text: #93b4d9;
+    --background: #0f1923;
+    --section-bg: #1a2535;
+    --text: #d0dce8;
+    --subtle: #8aa3bc;
+    --accent: #4da6ff;
+    --border: #2a3f57;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: var(--background);
@@ -265,4 +276,62 @@ nav {
         color: #102040;
         margin-bottom: 0.3rem;
     }
+}
+
+/* Dark mode toggle button */
+.dark-toggle {
+    background: none;
+    border: 2px solid var(--main-blue);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0.2rem 0.7rem;
+    color: var(--main-blue);
+    transition: background 0.2s, color 0.2s;
+    line-height: 1.5;
+}
+.dark-toggle:hover {
+    background: var(--main-blue);
+    color: #fff;
+}
+
+/* Dark mode overrides for hardcoded colors in tables and cards */
+[data-theme="dark"] #competencies table,
+[data-theme="dark"] #Professionaldevelopment table {
+    background: #1a2535;
+}
+[data-theme="dark"] #competencies th,
+[data-theme="dark"] #Professionaldevelopment th {
+    background: #2a3f57;
+    color: var(--header-text);
+}
+[data-theme="dark"] #toolsandservers li {
+    background: #1a2535;
+}
+[data-theme="dark"] #toolsandservers li:hover {
+    background: #2a3f57;
+}
+[data-theme="dark"] #articulos table {
+    background: #1a2535;
+}
+[data-theme="dark"] #articulos th {
+    background: #2a3f57;
+    color: var(--header-text);
+}
+[data-theme="dark"] #articulos td {
+    border-bottom-color: #2a3f57;
+}
+[data-theme="dark"] #articulos tr {
+    background: #1a2535;
+}
+[data-theme="dark"] nav {
+    background: #162233;
+}
+[data-theme="dark"] .dark-toggle {
+    border-color: var(--header-text);
+    color: var(--header-text);
+}
+[data-theme="dark"] .dark-toggle:hover {
+    background: var(--header-text);
+    color: #0f1923;
 }

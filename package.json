@@ -1,13 +1,13 @@
 {
-  "name": "resume-project",
+  "name": "argelistorres",
   "version": "1.0.0",
   "description": "A professional resume displayed as a web page.",
-  "main": "src/index.html",
+  "main": "index.html",
   "scripts": {
-    "start": "live-server src",
-    "build": "echo 'Build step not defined yet.'"
+    "start": "live-server .",
+    "build": "echo 'Static site - no build step required.'"
   },
-  "author": "Your Name",
+  "author": "Argelis Torres",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

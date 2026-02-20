@@ -1,49 +1,85 @@
-# Resume Project
+# Argelis Torres - Professional Resume Website
 
-This project is a simple web application that displays a professional resume. It is structured to provide a clean and responsive layout, utilizing HTML, CSS, and JavaScript.
+Personal CV website with dark mode, optimized for shareability and search engines. Deployed automatically to GitHub Pages.
+
+**Live site:** https://argelistorres.github.io/argelistorres/
 
 ## Project Structure
 
 ```
-resume-project
-├── src
-│   ├── index.html       # Main HTML document for the resume
-│   ├── styles
-│   │   └── main.css     # Styles for the index page
-│   └── scripts
-│       └── main.js      # JavaScript for dynamic interactions
-├── package.json         # npm configuration file
-└── README.md            # Project documentation
+argelistorres/
+├── index.html              # Main CV page
+├── articulos.html          # LinkedIn articles index
+├── styles/
+│   └── main.css            # All styles (CSS variables, responsive, dark mode)
+├── scripts/
+│   └── main.js             # Dark mode toggle, smooth scroll, scroll animations
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # GitHub Actions - auto deploy to GitHub Pages
+├── og-image.png            # Preview image for social media (share via LinkedIn, Twitter, etc.)
+├── package.json
+└── README.md
 ```
 
-## Getting Started
+## Features
 
-To get started with this project, follow these steps:
+- **Dark Mode** — Click the moon icon (☾) in the navigation to toggle. Preference is saved in local storage.
+- **Responsive Design** — Mobile-friendly with CSS Grid and media queries for all devices.
+- **Smooth Scroll** — Internal navigation links scroll smoothly to their sections.
+- **Scroll Animations** — Sections fade in with a subtle upward animation as they enter the viewport.
+- **SEO Optimized** — Open Graph and Twitter Card tags for better visibility when shared on social media. JSON-LD schema for structured data.
+- **Auto Deploy** — Push to `main` branch → GitHub Actions deploys automatically to GitHub Pages.
 
-1. **Clone the repository**:
-   ```
-   git clone <repository-url>
-   cd resume-project
-   ```
+## Local Development
 
-2. **Install dependencies**:
-   ```
-   npm install
-   ```
+### Using live-server (recommended)
 
-3. **Open the index page**:
-   Open `src/index.html` in your web browser to view the resume.
+```bash
+npm install
+npm start
+```
 
-## Usage
+Opens a live-reload server on `http://localhost:8080`. Changes to HTML, CSS, or JS refresh automatically in the browser.
 
-- The `index.html` file serves as the main entry point for the application.
-- The `main.css` file contains all the styles to ensure the resume is visually appealing.
-- The `main.js` file can be used to add interactivity, such as animations or form handling.
+### Direct in browser
 
-## Contributing
+Simply open `index.html` directly in your web browser.
 
-If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
+## Deploy to GitHub Pages
+
+### One-time setup
+
+1. Go to your repository Settings → Pages
+2. Under "Source", select **"GitHub Actions"**
+3. Save
+
+### Deploy
+
+Push to the `main` branch. The GitHub Actions workflow (`.github/workflows/deploy.yml`) automatically builds and deploys to GitHub Pages within 1-2 minutes.
+
+The site will be available at: `https://argelistorres.github.io/argelistorres/`
+
+## Social Media Preview
+
+When you share the CV link on LinkedIn, Twitter, or other platforms, it will show:
+
+- **Title:** "Argelis Torres - Technical Advisor & Dynamics 365 Expert"
+- **Description:** 18+ years of IT expertise
+- **Image:** `og-image.png` (must exist in the repo root for this to work)
+
+To set up the preview image:
+1. Add a professional photo or screenshot as `og-image.png` in the repository root
+2. Push to main
+3. Test with LinkedIn Post Inspector: https://www.linkedin.com/post-inspector/
+
+## Tech Stack
+
+- **HTML5** — Semantic markup
+- **CSS3** — Variables, Grid, Flexbox, dark mode support
+- **JavaScript (ES6)** — No framework, plain vanilla JS
+- **GitHub Actions** — CI/CD for automatic deployment
 
 ## License
 
-This project is licensed under the MIT License.
+MIT
