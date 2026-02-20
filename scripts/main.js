@@ -46,26 +46,30 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
 });
 
 // ============================================================
-// 3. INTERSECTION OBSERVER - animaciones de entrada por sección
+// 3. INTERSECTION OBSERVER - animaciones de entrada por sección con STAGGER
 // ============================================================
 (function () {
     var style = document.createElement('style');
     style.textContent =
         'section { opacity: 0; transform: translateY(24px);' +
-        '  transition: opacity 0.5s ease, transform 0.5s ease; }' +
+        '  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }' +
         'section.visible { opacity: 1; transform: translateY(0); }';
     document.head.appendChild(style);
 
+    var sections = document.querySelectorAll('section');
     var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
+        entries.forEach(function (entry, index) {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                var delay = index * 100;
+                setTimeout(function () {
+                    entry.target.classList.add('visible');
+                }, delay);
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('section').forEach(function (section) {
+    sections.forEach(function (section) {
         observer.observe(section);
     });
 })();

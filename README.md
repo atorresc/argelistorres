@@ -25,9 +25,12 @@ argelistorres/
 ## Features
 
 - **Dark Mode** — Click the moon icon (☾) in the navigation to toggle. Preference is saved in local storage.
+- **Modern Typography** — Using Google Fonts (Inter) for clean, professional appearance.
 - **Responsive Design** — Mobile-friendly with CSS Grid and media queries for all devices.
 - **Smooth Scroll** — Internal navigation links scroll smoothly to their sections.
-- **Scroll Animations** — Sections fade in with a subtle upward animation as they enter the viewport.
+- **Scroll Animations** — Sections fade in with staggered animations (100ms delay between each) as they enter the viewport.
+- **Sticky Navigation** — Nav bar stays visible at the top while scrolling with frosted glass effect (backdrop-filter blur).
+- **Visual Enhancements** — Gradient header, elevated cards with hover effects, smooth transitions throughout.
 - **SEO Optimized** — Open Graph and Twitter Card tags for better visibility when shared on social media. JSON-LD schema for structured data.
 - **Auto Deploy** — Push to `main` branch → GitHub Actions deploys automatically to GitHub Pages.
 
