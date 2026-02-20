@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artículos en LinkedIn - Argelis Torres</title>
+    <title>LinkedIn Articles - Argelis Torres</title>
+    <!-- SEO -->
+    <meta name="description" content="LinkedIn articles by Argelis Torres on Dynamics 365, Power Platform, Dataverse, and Azure solutions.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="LinkedIn Articles - Argelis Torres">
+    <meta property="og:description" content="Technical articles on Dynamics 365, Power Platform, Dataverse, and Azure by Argelis Torres.">
+    <meta property="og:url" content="https://argelistorres.github.io/argelistorres/articulos.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://argelistorres.github.io/argelistorres/og-image.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="LinkedIn Articles - Argelis Torres">
+    <meta name="twitter:description" content="Technical articles on Dynamics 365, Power Platform, Dataverse, and Azure.">
     <link rel="stylesheet" href="styles/main.css">
-
 </head>
 <body>
     <header>
@@ -26,7 +37,9 @@
             </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="articulos.html">My LinkedIn Articles</a></li>
-            
+            <li>
+                <button class="dark-toggle" id="darkToggle" aria-label="Switch to dark mode">&#9790;</button>
+            </li>
         </ul>
     </nav>
     <section id="articulos">
@@ -110,5 +123,6 @@
     <footer>
         <p>© 2025 Argelis Torres. All rights reserved.</p>
     </footer>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
